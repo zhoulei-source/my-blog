@@ -51,18 +51,16 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: "欢迎学习",
+        title: "欢迎",
         path: "/",
         collapsable: false, // 不折叠
-        children: [],
       },
       {
-        title: "基础学习",
-        path: "/handbook/ConditionalTypes",
+        title: "网站搭建与优化",
+        path: "/handbook/website/stats",
         collapsable: false, // 不折叠
         children: [
-          { title: "条件类型", path: "/handbook/ConditionalTypes" },
-          { title: "泛型", path: "/handbook/Generics" },
+          { title: "网站优化之数据统计", path: "/handbook/website/stats" },
         ],
       },
     ],

@@ -6,7 +6,6 @@ export default ({ router }) => {
                 _hmt.push(["_trackPageview", to.fullPath]);
             }
         }
-
         next();
     });
 };
