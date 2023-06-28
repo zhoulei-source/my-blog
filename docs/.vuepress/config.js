@@ -34,7 +34,6 @@ module.exports = {
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-        </script>        
         `,
     ],
   ],
@@ -60,6 +59,7 @@ module.exports = {
         path: "/handbook/website/stats",
         collapsable: false, // 不折叠
         children: [
+          { title: "网络之常见HTTP状态码", path: "/handbook/website/HTTP_CODE" },
           { title: "网站优化之数据统计", path: "/handbook/website/stats" },
         ],
       },
