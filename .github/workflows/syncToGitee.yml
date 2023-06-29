@@ -1,0 +1,25 @@
+name: syncToGitee
+on:
+  push:
+    branches:
+      - gh-pages
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mirror the Github organization repos to Gitee.
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: 'github/zhoulei-source'
+          dst: 'gitee/zhoulei-source'
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "my-blog"
+          force_update: true
+      - name: Enable debug mode
+        run: echo "DEBUG=true" >> $GITHUB_ENV
+
+
+
+
+#  static_list 表示单一仓库同步，force_update 为 true 表示启用 git push -f 强制同步，debug 为 true 表示启用 debug 开关
